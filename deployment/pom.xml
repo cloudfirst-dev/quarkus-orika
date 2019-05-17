@@ -4,8 +4,10 @@
     <groupId>dev.cloudfirst.quarkus.orika</groupId>
     <artifactId>quarkus-orikia-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+		<relativePath>../</relativePath>
   </parent>
-  <artifactId>quarkus-orikia-deployment</artifactId>
+  <artifactId>quarkus-orika-deployment</artifactId>
+	<packaging>jar</packaging>
   
   <dependencies>
 		<dependency>
@@ -25,7 +27,6 @@
 			<groupId>ma.glasnost.orika</groupId>
 			<artifactId>orika-core</artifactId>
 			<version>1.5.4</version>
-			<scope>provided</scope>
 		</dependency>
   </dependencies>
   
