@@ -5,7 +5,7 @@
     <artifactId>quarkus-orikia-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>quarkus-orikia</artifactId>
+  <artifactId>quarkus-orikia-deployment</artifactId>
   
   <dependencies>
 		<dependency>
@@ -17,7 +17,7 @@
 
 		<dependency>
 			<groupId>dev.cloudfirst.quarkus.orika</groupId>
-			<artifactId>quarkus-orika-runtime</artifactId>
+			<artifactId>quarkus-orika</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		
@@ -31,18 +31,19 @@
   
   <build>
 		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>io.quarkus</groupId>
-							<artifactId>quarkus-extension-processor</artifactId>
-							<version>${quarkus.version}</version>
-						</path>
-					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
-		</plugins>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <configuration>
+	                <annotationProcessorPaths>
+	                    <path>
+	                        <groupId>io.quarkus</groupId>
+	                        <artifactId>quarkus-extension-processor</artifactId>
+	                        <version>${quarkus.version}</version>
+	                    </path>
+	                </annotationProcessorPaths>
+	            </configuration>
+	        </plugin>
+	    </plugins>
 	</build>
 </project>

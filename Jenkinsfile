@@ -48,12 +48,12 @@ podTemplate(
 	    sh "${mvnCmd} test"
 	  }
 	  
-	  // change directory and run integration tests
-	  stage('Integration Tests') {
-	  	dir('integration-tests') {
-	  		sh "${mvnCmd} verify -Pnative-image"
-	  	}
-	  }
+	  // // change directory and run integration tests
+	  // stage('Integration Tests') {
+	  //	dir('integration-tests') {
+	  //		sh "${mvnCmd} verify -Pnative-image"
+	  //	}
+	  // }
 	
 	  // Using Maven to call SonarQube for Code Analysis
 	  stage('Code Analysis') {
