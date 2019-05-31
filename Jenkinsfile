@@ -64,7 +64,7 @@ podTemplate(
 	  // Publish the built war file to Nexus
 	  stage('Publish to Nexus') {
 	    echo "Publish to Nexus"
-	    sh "${mvnCmd} deploy -DskipTests=true"
+	    sh "${mvnCmd} deploy -DskipTests=true -DuniqueVersion=false"
 	  }
 	}
 }
