@@ -58,7 +58,7 @@ podTemplate(
 	  // Using Maven to call SonarQube for Code Analysis
 	  stage('Code Analysis') {
 	    echo "Running Code Analysis"
-	    sh "${mvnCmd} sonar:sonar -Dsonar.host.url=https://sonarqube-ci.apps.idsysapps.com -Dsonar.projectName=quarkus-orika"
+	    sh "${mvnCmd} sonar:sonar -Dsonar.host.url=https://sonarqube.idsysapps.com -Dsonar.projectName=quarkus-orika"
 	  }
 	
 	  // Publish the built war file to Nexus
